@@ -12,7 +12,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import {IgxNavbarModule,IgxIconModule,IgxNavigationDrawerModule} from 'igniteui-angular';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
