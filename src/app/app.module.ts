@@ -8,20 +8,30 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
 import { RoleComponent } from './role/role.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import {IgxNavbarModule,IgxIconModule,IgxNavigationDrawerModule} from 'igniteui-angular';
+import { SidebarComponent } from './sidebar/sidebar.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    RoleComponent
+    RoleComponent,
+    NavbarComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    BrowserAnimationsModule, // required animations module
-    ToastrModule.forRoot() // ToastrModule added
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    IgxNavbarModule,
+    IgxIconModule,
+    IgxNavigationDrawerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
