@@ -1,0 +1,74 @@
+<div class="d-flex justify-content-center">
+    <h3>ANgular Directives</h3>
+</div>
+<h3>Structural Directives</h3>
+
+<div class="row">
+    <div class="col-md-4">
+        <h4>*ngIf</h4>
+        <input type="text" [(ngModel)]="name">
+        <p *ngIf="title">Title var..</p>
+        <p *ngIf="name === 'Ahmet'">
+            isim Ahmet..
+        </p>
+        <button (click)="changeTitle();">toggle</button>
+        <br>
+        <div *ngIf="title; then titleExist; else titleNotExist;"></div>
+            <ng-template #titleExist>Title var</ng-template>
+            <ng-template #titleNotExist>Title yok</ng-template>
+    </div>
+    <div class="col-md-4">
+        <h4>*ngSwitch</h4>
+        <input type="text" [(ngModel)]="username">
+        <br>
+        <ul [ngSwitch]="username">
+            <li *ngSwitchCase="'Ahmet'">Hello Ahmet</li>
+            <li *ngSwitchCase="'Kerem'">Hello Kerem</li> 
+            <li *ngSwitchDefault>Hello everyone</li>   
+
+        </ul>
+    </div>
+
+<div class="col-md-4">
+    <h4>*ngFor</h4>
+    <ul>
+        <li *ngFor="let city of cities; let i = index">
+            {{i}} - id : {{city.id}} <br />
+            name: {{city.name}} <br />
+            bölge: {{city.region}}
+        </li>
+    </ul>
+</div>
+</div>
+<h4>Attribute Directives</h4>
+<div class="row">
+    <div class="col-md-6">
+        <h4>[ngClass]</h4>
+        <input type="text" [(ngModel)]="color">
+        <p [ngClass]="color === 'red' ? 'red' : 'blue'">Renk</p>
+        <p [ngClass]="{
+            red:color === 'red',
+            blue:color === 'blue'
+            }"
+            class="purple">Yeni renk</p>
+
+    </div>
+    <div class="col-md-6">
+        <h4>[ngStyle]</h4>
+        <input type="text" [(ngModel)]="color"/>
+        <p [ngStyle]="{color:color}">Style renk</p>
+        <p [ngStyle]="{color:color === 'Ahmet' ? 'red' : 'blue'}">Style renk</p>
+
+    </div>
+</div>
+<h4>Custom Directives</h4>
+<div class="row">
+    <div class="col-md-6">
+        <p appHighlight>Highlight Directive Works</p>
+        <p appHighlight [highlightColor]="yellow">Yellow Custom Directive</p>
+        <p appHighlight highlightColor="orange">Orange Custom Directive</p>
+
+    </div>
+
+</div>
+

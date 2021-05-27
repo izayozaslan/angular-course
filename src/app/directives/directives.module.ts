@@ -1,20 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DataBindingComponent } from './data-binding.component';
+import { DirectivesComponent } from './directives/directives.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { HighlightDirective } from 'src/libs';
 
 const routes: Routes =[
   {
   path: "",
-  component: DataBindingComponent
+  component: DirectivesComponent
   }
 ];
- 
+
+
 @NgModule({
-  declarations: [DataBindingComponent],
+  declarations: [DirectivesComponent, HighlightDirective],
   imports: [
     CommonModule, RouterModule.forChild(routes), FormsModule
   ]
 })
-export class DataBindingModule { }
+export class DirectivesModule { }
