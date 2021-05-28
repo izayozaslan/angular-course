@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-md-2">
+        <h4>lowercase</h4>
+        <p>lowercase: {{title | lowercase}}</p>
+    </div>
+    <div class="col-md-2">
+        <h4>lowercase</h4>
+        <p>titlecase: {{title | titlecase}}</p>
+    </div>
+     <div class="col-md-2">
+        <h4>uppercase</h4>
+        <p>uppercase: {{title | uppercase}}</p>
+        <p>turkish uppercase: {{turkishUpperCaseVal}}</p>
+    </div>
+    <div class="col-md-4">
+        <p>normal date : {{today | date: "medium"}}</p>
+        <p>pipe date : {{today | date: "fullDate"}}</p>
+        <p>turkish pipe date : {{today | date: "fullDate":"":"tr-TR"}}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+        <h4>Json pipe</h4>
+        <pre>{{ objectVal | json }}</pre>
+    </div>
+    <div class="col-md-2">
+        <h4>slice pipe</h4>
+        <p>normal hali : {{cityName}}</p>
+        <p>slice ve upper hali: {{cityName | uppercase | slice: 0:3 }}</p>
+    </div>
+    <div class="col-md-3">
+        <h4>custom pipe</h4>
+        <p>{{cash | tl}}</p>
+        <br>
+        <h5>cities</h5>
+        <ul>
+            <li *ngFor="let city of cities | myFiltering : 'a'">{{city}}</li>
+        </ul>
+    </div>
+    
+</div>
+
