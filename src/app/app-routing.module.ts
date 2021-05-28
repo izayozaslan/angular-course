@@ -32,6 +32,10 @@ const routes: Routes = [
   path:"pipes",
   loadChildren: () => import("./pipes/pipes.module").then (m => m.PipesModule)
 },
+{
+  path:"parents",
+  loadChildren: () => import("./parents/parents.module").then (m => m.ParentsModule)
+},
 
 {
   path:"**",
