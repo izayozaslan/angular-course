@@ -6,6 +6,8 @@ import { of } from "rxjs";
 })
 export class UserService {
     users = ["ahmet" , "kerem"];
+    isLoggedIn = false;
+    
 
     constructor(){}
 
@@ -15,5 +17,9 @@ export class UserService {
         } else {
             return of (false);
         }
+    }
+
+    login() {
+        this.isLoggedIn = !this.isLoggedIn;
     }
 }

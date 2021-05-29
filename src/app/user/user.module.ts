@@ -5,6 +5,8 @@ import { UserComponent } from './user/user.component';
 import { UserDetailsComponent } from './user/user-details/user-details.component';
 import { UserRoleComponent } from './user/user-role/user-role.component';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthChildGuard } from 'src/libs/guards/auth-child.guard';
+import { IgxButtonModule } from 'igniteui-angular';
 
 const routes: Routes =[
   {
@@ -23,18 +25,19 @@ const routes: Routes =[
       path:"role",
       component:UserRoleComponent
     },
-    {
-      path:"",
-      redirectTo:"details",
-      pathMatch: "full"
-    }
-  ]}
-];
+    //{
+    //  path:"",
+    //  redirectTo:"details",
+    //  pathMatch: "full"
+    //}
+  ],
+  canActivateChild: [AuthChildGuard]
+}];
 
 @NgModule({
   declarations: [UserListComponent, UserComponent, UserDetailsComponent, UserRoleComponent],
   imports: [
-    CommonModule,RouterModule.forChild(routes)
+    CommonModule, IgxButtonModule ,RouterModule.forChild(routes)
   ]
 })
 export class UserModule { }

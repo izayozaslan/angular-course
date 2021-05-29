@@ -1,5 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthExitGuard, AuthGuard } from 'src/libs';
 import { HomeComponent } from './home/home.component';
 import { RoleComponent } from './role/role.component';
 
@@ -26,11 +27,11 @@ const routes: Routes = [
 },
 {
   path:"directives",
-  loadChildren: () => import("./directives/directives.module").then (m => m.DirectivesModule)
+  loadChildren: () => import("./directives/directives.module").then (m => m.DirectivesModule), canActivate: [AuthGuard]
 },
 {
   path:"pipes",
-  loadChildren: () => import("./pipes/pipes.module").then (m => m.PipesModule)
+  loadChildren: () => import("./pipes/pipes.module").then (m => m.PipesModule), canDeactivate:[AuthExitGuard]
 },
 {
   path:"parents",
@@ -48,7 +49,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {useHash:true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

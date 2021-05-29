@@ -17,6 +17,7 @@ import { CookieService } from 'ngx-cookie-service';
 
 import localeTr from "@angular/common/locales/tr";
 import localeTrExtra from "@angular/common/locales/extra/tr";
+import { UserService } from 'src/libs';
 
 registerLocaleData(localeTr, "tr-TR", localeTrExtra);
 
@@ -40,7 +41,7 @@ registerLocaleData(localeTr, "tr-TR", localeTrExtra);
     RouterModule
     
   ],
-  providers: [CookieService],
+  providers: [CookieService, UserService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

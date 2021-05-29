@@ -4,8 +4,13 @@
     [isActionButtonVisible]="true">
 
     <igx-icon>search</igx-icon>
-    <igx-icon>account-circle</igx-icon>
+    <igx-icon (click)= "toggleLogin()">account-circle</igx-icon>
     <igx-icon>more_vert</igx-icon>
+
+    <igx-action-icon>
+        <igx-icon class="customIcon" routerLink="home">home</igx-icon>
+    </igx-action-icon>
+    
 </igx-navbar>
 
     
