@@ -1,0 +1,10 @@
+{
+    "app": {
+        "title": "Bu bir başlıktır."
+    },
+    "toaster": {
+        "title": "Giriş başarılı",
+        "message": "hoşgeldiniz"
+    } 
+   
+}

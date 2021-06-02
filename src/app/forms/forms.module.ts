@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsComponent } from './forms/forms.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { UserService } from 'src/libs/services/user-service';
+import { UserService } from 'src/libs/services/user.service';
 
 const routes: Routes =[
   {

@@ -37,7 +37,7 @@ const routes: Routes =[
 @NgModule({
   declarations: [UserListComponent, UserComponent, UserDetailsComponent, UserRoleComponent],
   imports: [
-    CommonModule, IgxButtonModule ,RouterModule.forChild(routes)
+    CommonModule, IgxButtonModule ,RouterModule.forChild(routes) 
   ]
 })
 export class UserModule { }

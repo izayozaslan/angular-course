@@ -1,0 +1,9 @@
+{
+    "app": {
+        "title": "This is a title"
+    },
+    "toaster": {
+        "title": "succesfully logged in",
+        "message": "welcome"
+    } 
+}

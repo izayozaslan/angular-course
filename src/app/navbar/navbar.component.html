@@ -3,14 +3,22 @@
     actionButtonIcon="home"
     [isActionButtonVisible]="true">
 
+
+    <igx-select [value]="lang" (onSelection)='langChange.emit($event.newSelection.value)'>
+        <igx-select-item value="tr">Türkçe</igx-select-item>
+        <igx-select-item value="en">İngilizce</igx-select-item>
+    </igx-select>
+    
+
+
     <igx-icon>search</igx-icon>
-    <igx-icon (click)= "toggleLogin()">account-circle</igx-icon>
+    <igx-icon (click)= "toggleLogin()">favorite</igx-icon>
+    <!--account-circle-->
     <igx-icon>more_vert</igx-icon>
 
     <igx-action-icon>
         <igx-icon class="customIcon" routerLink="home">home</igx-icon>
     </igx-action-icon>
-    
 </igx-navbar>
 
     
