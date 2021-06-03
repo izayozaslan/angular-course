@@ -7,6 +7,9 @@ export const environment = {
   api: {
     nestjs: {
       role: "http://udemy-nestjs-course.herokuapp.com/api"
+    },
+    fleek: {
+      host: "https://fleek-api.herokuapp.com/api"
     }
   }
 };

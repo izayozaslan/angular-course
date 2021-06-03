@@ -45,6 +45,10 @@ const routes: Routes = [
   path:"map",
   loadChildren: () => import("./map/map.module").then (m => m.MapModule)
 },
+{
+  path:"file-upload",
+  loadChildren: () => import("./file-upload/file-upload.module").then (m => m.FileUploadModule)
+},
 
 {
   path:"**",
