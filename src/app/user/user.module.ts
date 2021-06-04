@@ -23,7 +23,7 @@ const routes: Routes =[
     },
     {
       path:"role",
-      component:UserRoleComponent
+      component:UserRoleComponent 
     },
     //{
     //  path:"",
